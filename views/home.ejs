@@ -3,12 +3,12 @@
 <h1><%= index %></h1>
 <p id="postText"> <%= Content %> </p>
 
-<% post.forEach((posts) => { %>
-    <h1><%= posts.title %></h1>
-    <% if(posts.content.length > 200){ %>
-        <p id="postText"> <%= posts.content.substring(0, 200) %> <a target="_blank" href="/posts/<%= posts.title %>">...Read More</a></p>
+<% post.forEach((postss) => { %>
+    <h1><%= postss.title %></h1>
+    <% if(postss.content.length > 200){ %>
+        <p id="postText"> <%= postss.content.substring(0, 200) %> <a target="_blank" href="/posts/<%= postss.title %>">...Read More</a></p>
     <% } else { %>
-        <p id="postText"><%= posts.content %></p>
+        <p id="postText"><%= postss.content %></p>
     <% } %>
 <% }); %>
 
