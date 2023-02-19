@@ -1,0 +1,15 @@
+<%- include("partial/header"); -%>
+
+<h1><%= index %></h1>
+<p id="postText"> <%= Content %> </p>
+
+<% post.forEach((posts) => { %>
+    <h1><%= posts.title %></h1>
+    <% if(posts.content.length > 200){ %>
+        <p id="postText"> <%= posts.content.substring(0, 200) %> <a href="/posts/<%= posts.title %>">...Read More</a></p>
+    <% } else { %>
+        <p id="postText"><%= posts.content %></p>
+    <% } %>
+<% }); %>
+
+<%- include("partial/footer"); -%>
