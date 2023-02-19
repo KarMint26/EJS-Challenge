@@ -6,7 +6,7 @@
 <% post.forEach((posts) => { %>
     <h1><%= posts.title %></h1>
     <% if(posts.content.length > 200){ %>
-        <p id="postText"> <%= posts.content.substring(0, 200) %> <a href="/posts/<%= posts.title %>">...Read More</a></p>
+        <p id="postText"> <%= posts.content.substring(0, 200) %> <a target="_blank" href="/posts/<%= posts.title %>">...Read More</a></p>
     <% } else { %>
         <p id="postText"><%= posts.content %></p>
     <% } %>
